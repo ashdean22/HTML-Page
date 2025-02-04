@@ -31,35 +31,37 @@
       <div class="div4">
         <h2>Subscription Plans</h2>
 
-        <input type="email" id="input" placeholder="Enter your email" />
-        <button id="subscribe">Subscribe</button>
+        <br />
+
+        <input type="email" id="email-input" placeholder="Enter your email" />
+        <button id="subscribe-btn">Subscribe</button>
 
         <script>
-          // Function to handle subscription
+          // This function is for the subscription process
           function subscribe() {
-            // Get email input value
+            // Get the email input value from the user
             var email = document.getElementById("email-input").value;
 
-            // Check if input is empty
+            // This if statement checks if the email input is empty
             if (email === "") {
-              alert("Please enter a valid email address.");
+              alert("You must enter a valid email address to subscribe.");
               return;
             }
 
-            // Show confirmation alert
+            // Confirmation alert showing the user subscribed
             alert("Thank you for subscribing, " + email + "!");
 
-            // Change button styling after subscription
+            // Changes the button appearance after subscription
             var button = document.getElementById("subscribe-btn");
             button.style.backgroundColor = "green"; // Change button color to green
-            button.innerText = "Subscribed"; // Change button text
-            button.disabled = true; // Disable button after subscription
+            button.innerText = "Subscribed"; // Change button text after it has been clicked
+            button.disabled = true; // Disable button after user has already subscription
           }
 
           // Add event listener to button
           document
             .getElementById("subscribe-btn")
-            .addEventListener("click", subscribe);
+            .addEventListener("click", subscribe); // once the subscribe button is clicked, it will activate the subscribe function.
         </script>
       </div>
     </div>
